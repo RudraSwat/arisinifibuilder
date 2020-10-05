@@ -1,0 +1,34 @@
+# {{{ CDDL HEADER
+#
+# This file and its contents are supplied under the terms of the
+# Common Development and Distribution License ("CDDL"), version 1.0.
+# You may only use this file in accordance with the terms of version
+# 1.0 of the CDDL.
+#
+# A full copy of the text of the CDDL should have accompanied this
+# source. A copy of the CDDL is also available via the Internet at
+# http://www.illumos.org/license/CDDL.
+# }}}
+
+# Copyright 2011-2012 OmniTI Computer Consulting, Inc.  All rights reserved.
+# Copyright 2020 OmniOS Community Edition (OmniOSce) Association.
+
+# Mediated binaries
+<transform file link hardlink path=$(PREFIX)/bin/(.*) -> emit \
+    link path=usr/bin/%<1> target=../perl5/$(VERSION)/bin/%<1> \
+    mediator=$(PROG) mediator-version=$(VERSION) >
+<transform file link hardlink path=$(PREFIX)/bin/(.*) -> emit \
+    link path=usr/perl5/bin/%<1> target=../$(VERSION)/bin/%<1> \
+    mediator=$(PROG) mediator-version=$(VERSION) >
+
+# Mediated man pages
+<transform file hardlink path=$(PREFIX)/man/(man\d)/(.*) -> emit \
+    link path=usr/share/man/%<1>/%<2> \
+    target=../../../perl5/$(VERSION)/man/%<1>/%<2> \
+    mediator=$(PROG) mediator-version=$(VERSION) >
+
+# Set the doc.man facet on pod manuals
+<transform path=.*\.pod$ -> default facet.doc.man true>
+
+license Artistic license=Artistic
+

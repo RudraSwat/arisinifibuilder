@@ -1,0 +1,8 @@
+HOST_NAME_MAX.patch
+init_fini.patch
+tddl.patch
+paths.patch
+dropprivs.patch
+mlock.patch
+tspi_ps_tspps.c.patch
+multiple_symbols.patch

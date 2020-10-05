@@ -1,0 +1,78 @@
+		=== g++ Summary for unix/ ===
+# of expected passes		129936
+# of unexpected failures	201
+# of expected failures		529
+# of unsupported tests		6177
+		=== g++ Summary for unix//-msave-args ===
+# of expected passes		129924
+# of unexpected failures	222
+# of expected failures		529
+# of unsupported tests		6177
+		=== g++ Summary ===
+# of expected passes		259860
+# of unexpected failures	423
+# of expected failures		1058
+# of unsupported tests		12354
+		=== gcc Summary for unix/ ===
+# of expected passes		135191
+# of unexpected failures	123
+# of expected failures		525
+# of unresolved testcases	1
+# of unsupported tests		2337
+		=== gcc Summary for unix//-msave-args ===
+# of expected passes		135140
+# of unexpected failures	167
+# of expected failures		525
+# of unresolved testcases	1
+# of unsupported tests		2341
+		=== gcc Summary ===
+# of expected passes		270331
+# of unexpected failures	290
+# of expected failures		1050
+# of unresolved testcases	2
+# of unsupported tests		4678
+		=== gfortran Summary for unix/ ===
+# of expected passes		50671
+# of unexpected failures	16
+# of expected failures		177
+# of unsupported tests		106
+		=== gfortran Summary for unix//-msave-args ===
+# of expected passes		50671
+# of unexpected failures	16
+# of expected failures		177
+# of unsupported tests		106
+		=== gfortran Summary ===
+# of expected passes		101342
+# of unexpected failures	32
+# of expected failures		354
+# of unsupported tests		212
+		=== go Summary for unix/ ===
+# of expected passes		7341
+# of unexpected failures	1
+# of expected failures		1
+# of untested testcases		10
+# of unsupported tests		1
+		=== go Summary for unix//-msave-args ===
+# of expected passes		7341
+# of unexpected failures	1
+# of expected failures		1
+# of untested testcases		10
+# of unsupported tests		1
+		=== go Summary ===
+# of expected passes		14682
+# of unexpected failures	2
+# of expected failures		2
+# of untested testcases		20
+# of unsupported tests		2
+		=== objc Summary for unix/ ===
+# of expected passes		2782
+# of expected failures		6
+# of unsupported tests		68
+		=== objc Summary for unix//-msave-args ===
+# of expected passes		2782
+# of expected failures		6
+# of unsupported tests		68
+		=== objc Summary ===
+# of expected passes		5564
+# of expected failures		12
+# of unsupported tests		136

@@ -1,0 +1,28 @@
+set name=pkg.fmri value=pkg://@PKGPUBLISHER@/system/prerequisite/gnu@0.5.11,5.11-@PVER@:20120222T000000Z
+set name=variant.arch value=i386
+set name=variant.opensolaris.zone value=global value=nonglobal
+set name=pkg.description value="Common GNU package"
+set name=pkg.summary value="gcmn - Common GNU package"
+
+dir group=sys mode=0755 owner=root path=usr
+
+dir group=bin mode=0755 owner=root path=usr/sfw
+dir group=bin mode=0755 owner=root path=usr/sfw/lib
+dir group=bin mode=0755 owner=root path=usr/sfw/lib/locale
+dir group=bin mode=0755 owner=root path=usr/sfw/share
+dir group=bin mode=0755 owner=root path=usr/sfw/share/doc
+dir group=bin mode=0755 owner=root path=usr/sfw/share/man
+dir group=bin mode=0755 owner=root path=usr/sfw/share/src
+
+dir group=bin mode=0755 owner=root path=usr/gnu
+dir group=bin mode=0755 owner=root path=usr/gnu/bin
+dir group=bin mode=0755 owner=root path=usr/gnu/bin/i386
+dir group=bin mode=0755 owner=root path=usr/gnu/lib
+dir group=sys mode=0755 owner=root path=usr/gnu/share
+dir group=bin mode=0755 owner=root path=usr/gnu/share/man
+
+link path=usr/sfw/doc target=share/doc
+link path=usr/sfw/share/locale target=../lib/locale
+link path=usr/sfw/src target=share/src
+link path=usr/sfw/man target=share/man
+

@@ -1,0 +1,43 @@
+# {{{ CDDL HEADER
+#
+# This file and its contents are supplied under the terms of the
+# Common Development and Distribution License ("CDDL"), version 1.0.
+# You may only use this file in accordance with the terms of version
+# 1.0 of the CDDL.
+#
+# A full copy of the text of the CDDL should have accompanied this
+# source. A copy of the CDDL is also available via the Internet at
+# http://www.illumos.org/license/CDDL.
+# }}}
+
+# Copyright 2011-2012 OmniTI Computer Consulting, Inc.  All rights reserved.
+# Copyright 2020 OmniOS Community Edition (OmniOSce) Association.
+
+<transform path=usr/share/gtk -> drop>
+<transform path=etc -> drop>
+
+<transform file path=usr/bin/(.*/)?gdbus -> drop>
+<transform file path=usr/bin/(.*/)?gtester-report -> drop>
+
+<transform file path=usr/share/man(.*/)?/gdbus -> drop>
+<transform file path=usr/share/man/(.*/)?gtester-report$ -> drop>
+
+<transform file path=.*charset\.alias$ -> drop>
+<transform dir path=usr/lib/amd64/gdbus-2.0$ -> drop>
+<transform dir path=usr/lib/amd64/glib-2.0$ -> drop>
+<transform dir path=usr/lib/gdbus-2.0$ -> drop>
+<transform dir path=usr/lib/glib-2.0$ -> drop>
+
+<transform path=usr/share(/glib-2.0)?/gdb -> drop>
+
+<transform file path=usr/bin/glib-(genmarshal|mkenums) \
+    -> set pkg.depend.bypass-generate .* >
+
+# Drop python2 objects from codegen
+<transform file dir path=usr/.*/codegen/[^/]+\.pyc -> drop>
+
+# Drop app tests
+<transform file dir path=usr/(?:share|libexec)/(?:amd64/)?installed-tests -> drop>
+
+license COPYING license=LGPLv2.1
+

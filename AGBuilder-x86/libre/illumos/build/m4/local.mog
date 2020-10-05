@@ -1,0 +1,22 @@
+# {{{ CDDL HEADER
+#
+# This file and its contents are supplied under the terms of the
+# Common Development and Distribution License ("CDDL"), version 1.0.
+# You may only use this file in accordance with the terms of version
+# 1.0 of the CDDL.
+#
+# A full copy of the text of the CDDL should have accompanied this
+# source. A copy of the CDDL is also available via the Internet at
+# http://www.illumos.org/license/CDDL.
+# }}}
+
+# Copyright 2019 OmniOS Community Edition (OmniOSce) Association.
+
+license COPYING license=GPLv3
+
+dir group=bin mode=0755 owner=root path=usr/sfw/bin
+dir group=bin mode=0755 owner=root path=usr/share/man/man1
+link path=usr/bin/gm4 target=../gnu/bin/m4
+link path=usr/sfw/bin/gm4 target=../../gnu/bin/m4
+link path=usr/share/man/man1/gm4.1 target=../../../gnu/share/man/man1/m4.1
+
