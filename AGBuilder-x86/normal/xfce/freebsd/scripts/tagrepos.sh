@@ -17,12 +17,12 @@ repodir="/tmp/furybsd-tag"
 rm -rf ${repodir}
 mkdir -p ${repodir}
 
-if [ ! -f "/usr/local/furybsd/version" ] ; then
-  echo "FuryBSD must be built first"
+if [ ! -f "/usr/local/arisblu/version" ] ; then
+  echo "Arisblu must be built first"
   exit 1
 fi
 
-version=`cat /usr/local/furybsd/version`
+version=`cat /usr/local/arisblu/version`
 
 git clone git@github.com:furybsd/furybsd-livecd.git ${repodir}/furybsd-livecd
 

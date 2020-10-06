@@ -9,7 +9,7 @@ desktop=$1
 tag=$2
 cwd=$(realpath | sed 's|/scripts||g')
 workdir="/usr/local"
-livecd="${workdir}/furybsd"
+livecd="${workdir}/arisblu"
 if [ -z "${arch}" ] ; then
   arch=amd64
 fi
@@ -26,8 +26,8 @@ iso="${livecd}/iso"
 uzip="${livecd}/uzip"
 cdroot="${livecd}/cdroot"
 ramdisk_root="${cdroot}/data/ramdisk"
-vol="furybsd"
-label="FURYBSD"
+vol="arisblu"
+label="ARISBLU"
 export DISTRIBUTIONS="kernel.txz base.txz"
 
 # Only run as superuser
@@ -58,14 +58,14 @@ fi
 # Get the version tag
 if [ -z "$2" ] ; then
   rm /usr/local/furybsd/tag >/dev/null 2>/dev/null || true
-  export vol="FuryBSD-${version}-${edition}"
+  export vol="Arisblu-${version}-${edition}"
 else
   rm /usr/local/furybsd/version >/dev/null 2>/dev/null || true
   echo "${2}" > /usr/local/furybsd/tag
-  export vol="FuryBSD-${version}-${edition}-${tag}"
+  export vol="Arisblu-${version}-${edition}-${tag}"
 fi
 
-label="FURYBSD"
+label="ARISBLU"
 isopath="${iso}/${vol}-${arch}.iso"
 
 cleanup()

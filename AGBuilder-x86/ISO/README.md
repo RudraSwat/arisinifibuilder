@@ -1,0 +1,2 @@
+# ISO Files
+Download the ISO files for Illumos, FreeBSD, and Linux editions. They MUST be named `freebsd.iso` `illumos.iso` and `linux.iso` respectively. The reason for this is for our building shell script.

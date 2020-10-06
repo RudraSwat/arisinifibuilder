@@ -13,14 +13,14 @@ mount -u -w /
 echo "==> Make mountpoints"
 mkdir -p /cdrom
 
-echo "Waiting for FURYBSD media to initialize"
+echo "Waiting for ARISBLU media to initialize"
 while : ; do
-    [ -e "/dev/iso9660/FURYBSD" ] && echo "found /dev/iso9660/FURYBSD" && break
+    [ -e "/dev/iso9660/ARISBLU" ] && echo "found /dev/iso9660/ARISBLU" && break
     sleep 1
 done
 
 echo "==> Mount cdrom"
-mount_cd9660 /dev/iso9660/FURYBSD /cdrom
+mount_cd9660 /dev/iso9660/ARISBLU /cdrom
 mdconfig -f /cdrom/data/system.uzip -u 1
 zpool import furybsd -o readonly=on
 
@@ -35,7 +35,7 @@ fi
  echo "Required memory ${x} for memdisk"
  echo "Detected memory ${y} for memdisk"
  if [ $x -gt $y ] ; then 
-  echo "FuryBSD requires 4GB of memory for memdisk, and operation!"
+  echo "Arisblu requires 4GB of memory for memdisk, and operation!"
   echo "Type exit, and press enter after entering the rescue shell to power off."
   exit 1
  fi

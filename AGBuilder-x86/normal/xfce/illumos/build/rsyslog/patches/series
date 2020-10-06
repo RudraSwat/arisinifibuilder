@@ -1,4 +1,0 @@
-runtime-parser.c.patch
-runtime-rsyslog.h.patch
-openssl.patch
-man.patch

@@ -1,5 +1,5 @@
 cat << EOF
-name:          furybsd-live-settings
+name:          arisblu-live-settings
 version:       0
 origin:        local
 comment:       Package that installs FuryBSD configuration
